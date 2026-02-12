@@ -3,7 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Señor Shine | Mobile Detailing</title>
+  <title>Se&ntilde;or Shine | Mobile Detailing</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="shortcut icon" href="favicon.png">
+
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root{
@@ -28,29 +33,14 @@
       margin:auto;
     }
 
-    
-
-    .logo-small{
-      height:50px;
-      width:auto;
-    }
-
-    nav a{
-      margin-left:24px;
-      text-decoration:none;
-      color:var(--muted);
-      font-weight:600;
-    }
-
-    nav a:hover{color:var(--text)}
-
     .hero{
       padding:60px 0 60px;
       text-align:center;
     }
 
+    /* 20% larger logo */
     .hero-logo{
-      max-width:320px;
+      max-width:384px; /* was 320px */
       width:100%;
       margin:0 auto 30px;
       display:block;
@@ -80,12 +70,6 @@
       margin:5px;
       border:none;
       cursor:pointer;
-    }
-
-    .btn.secondary{
-      background:transparent;
-      border:1px solid var(--accent);
-      color:var(--accent);
     }
 
     section{
@@ -168,25 +152,16 @@
     @media(max-width:900px){
       .pricing-grid{ grid-template-columns:1fr; }
     }
-
-    @media(max-width:768px){
-      header{flex-direction:column;gap:10px}
-      nav a{margin-left:12px}
-    }
   </style>
 </head>
 <body>
-  
 
   <section class="hero">
     <div class="container">
-      <!-- Main logo display -->
       <img src="logo.png" alt="Señor Shine Mobile Detailing" class="hero-logo">
-
       <h1>Mobile Detailing. Done Right.</h1>
       <p>Professional interior & exterior detailing at your home or office. Simple pricing. Easy booking. Premium chemicals.</p>
       <a href="#booking" class="btn">Book Now</a>
-      
     </div>
   </section>
 
@@ -196,140 +171,45 @@
         <h2>Pricing</h2>
       </div>
       <div class="pricing-grid">
+
         <div class="card">
           <h3>Exterior Detail</h3>
-          <div class="price">Starting at $70 <span style="font-size:14px; font-weight:500; color:var(--muted);">(Cars)</span></div>
-          <div style="color:var(--muted); font-size:14px; margin-bottom:15px;"><span style="color:var(--accent2); font-weight:600;">+ $20 for SUVs &amp; Trucks</span></div>
+          <div class="price">Starting at $70</div>
           <ul>
             <li>Foam pre-soak + hand wash</li>
-            <li>Bug &amp; light tar removal (front end)</li>
-            <li>Wheel faces + barrels (as accessible)</li>
-            <li>Tire scrub + tire shine</li>
-            <li>Door jamb wipe-down</li>
-            <li>Spray sealant for gloss + protection (3 month protection)</li>
-            <li>Final towel dry (no water spots)</li>
+            <li>Bug & light tar removal</li>
+            <li>Wheel cleaning</li>
+            <li>Tire shine</li>
+            <li>3 month spray sealant protection</li>
           </ul>
           <a href="#booking" class="btn select-service" data-service="Exterior Detail">Select</a>
         </div>
 
         <div class="card">
           <h3>Interior Detail</h3>
-          <div class="price">Starting at $120 <span style="font-size:14px; font-weight:500; color:var(--muted);">(Cars)</span></div>
-          <div style="color:var(--muted); font-size:14px; margin-bottom:15px;"><span style="color:var(--accent2); font-weight:600;">+ $20 for SUVs &amp; Trucks</span></div>
+          <div class="price">Starting at $120</div>
           <ul>
-            <li>Thorough vacuum (seats, carpets, mats, trunk)</li>
-            <li>Detail brushing of vents, seams, crevices</li>
-            <li>Wipe-down + UV protectant on plastics & trim</li>
-            <li>Leather conditioning (as needed)</li>
-            <li>Interior windows + mirrors streak-free</li>
-            <li>Light stain spot treatment (as needed)</li>
-            <li>Door panels, cupholders, center console cleaned</li>
-            <li>Deodorize + fresh finish (no heavy fragrance)</li>
+            <li>Thorough vacuum</li>
+            <li>Detail brushing</li>
+            <li>UV protectant</li>
+            <li>Leather conditioning</li>
+            <li>Interior window cleaning</li>
           </ul>
-          <div style="color:var(--muted); font-size:13px; line-height:1.5; margin-bottom:18px;">
-            <span style="color:var(--accent2); font-weight:600;">Note:</span> Heavy pet hair, deep stains, excessive sand/mud, or heavy odor removal may require an add-on.
-          </div>
           <a href="#booking" class="btn select-service" data-service="Interior Detail">Select</a>
         </div>
 
         <div class="card">
           <h3>Full Detail</h3>
-          <div class="price">Starting at $170 <span style="font-size:14px; font-weight:500; color:var(--muted);">(Cars)</span></div>
-          <div style="color:var(--muted); font-size:14px; margin-bottom:15px;"><span style="color:var(--accent2); font-weight:600;">+ $30 for SUVs &amp; Trucks</span></div>
+          <div class="price">Starting at $170</div>
           <ul>
-            <li>Interior + Exterior complete detail</li>
-            <li>Door jambs cleaned + wiped down</li>
-            <li>Trim dressing (interior + exterior)</li>
-            <li>Spray sealant protection</li>
-            <li>Final touch-up inspection</li>
-            <li>High-gloss finish + clean interior reset</li>
+            <li>Interior + Exterior detail</li>
+            <li>Sealant protection</li>
+            <li>Trim dressing</li>
+            <li>Final inspection</li>
           </ul>
           <a href="#booking" class="btn select-service" data-service="Full Detail">Select</a>
         </div>
-      </div>
-    </div>
-  </section>
 
-    </section>
-
-  <section id="addons">
-    <div class="container">
-      <div class="section-title">
-        <h2>Add-Ons</h2>
-        <p style="color:var(--muted); margin-top:10px; max-width:600px; margin-left:auto; margin-right:auto;">
-          Enhance your detail with premium upgrade services tailored to your vehicle’s condition.
-        </p>
-      </div>
-
-      <div class="pricing-grid" style="grid-template-columns:repeat(2, minmax(0, 1fr));">
-        <div class="card">
-          <h3>Clay Bar + Iron Decontamination</h3>
-          <div class="price">Starting at $35</div>
-          <ul>
-            <li>Removes embedded contaminants + brake dust</li>
-            <li>Deep chemical + mechanical decontamination</li>
-            <li>Improves gloss + smoothness</li>
-            <li>Promotes better adhesion of sealant</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <h3>Seat Shampoo / Extraction</h3>
-          <div class="price">Starting at $40+</div>
-          <ul>
-            <li>Deep fabric cleaning treatment</li>
-            <li>Removes stains + embedded dirt</li>
-            <li>Ideal for spills + heavy traffic areas</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <h3>Heavy Pet Hair Removal</h3>
-          <div class="price">Starting at $30+</div>
-          <ul>
-            <li>Removal of excessive embedded pet hair</li>
-            <li>Specialized tools for deep carpet + seat fibers</li>
-            <li>Recommended for heavily shedding pets</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <h3>Engine Bay Detail</h3>
-          <div class="price">Starting at $25</div>
-          <ul>
-            <li>Degrease + gentle cleaning</li>
-            <li>Plastic dressing + clean finish</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <h3>Headlight Restoration</h3>
-          <div class="price">Starting at $30</div>
-          <ul>
-            <li>Wet sanded to remove oxidation + haze</li>
-            <li>Polished for clarity restoration</li>
-            <li>Clear coat protection applied</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <h3>Exterior Plastic Trim Dressing</h3>
-          <div class="price">Starting at $20</div>
-          <ul>
-            <li>Restores faded exterior trim</li>
-            <li>UV protection + deep satin finish</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <h3>Heavy Odor Removal</h3>
-          <div class="price">Starting at $75</div>
-          <ul>
-            <li>Deep interior deodorizing treatment</li>
-            <li>Oxygenator treatment used to neutralize odors</li>
-            <li>Targets smoke + persistent odors</li>
-          </ul>
-        </div>
       </div>
     </div>
   </section>
@@ -338,37 +218,19 @@
     <div class="container">
       <div class="section-title">
         <h2>Book Your Appointment</h2>
-        <p style="color:var(--muted); margin-top:10px; max-width:500px; margin-left:auto; margin-right:auto;">
-          After submitting the form, your booking request will be reviewed and confirmed shortly via text or email.
-        </p>
       </div>
       <form>
-        <input type="text" placeholder="Full Name" required>
-        <input type="tel" placeholder="Phone" required>
-        <input type="email" placeholder="Email" required>
-        
-        <label style="color:var(--muted); font-size:14px;">Service Address</label>
-        <input type="text" placeholder="Street Address" required>
-        <input type="text" placeholder="City" required>
-        <input type="text" placeholder="ZIP Code" required>
-        <select required>
+        <input type="text" name="full_name" placeholder="Full Name" required>
+        <input type="tel" name="phone" placeholder="Phone" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <select name="service" required>
           <option value="">Select Service</option>
           <option>Exterior Detail</option>
           <option>Interior Detail</option>
           <option>Full Detail</option>
         </select>
-        <input type="date" required>
-        <label style="color:var(--muted); font-size:14px;">Select Add-Ons (Optional)</label>
-        <div style="display:grid; gap:8px; color:var(--muted); font-size:14px;">
-          <label><input type="checkbox"> Clay Bar + Iron Decontamination (+$35)</label>
-          <label><input type="checkbox"> Plastic Trim Dressing (+$20)</label>
-          <label><input type="checkbox"> Engine Bay Detail (+$25)</label>
-          <label><input type="checkbox"> Headlight Restoration (+$30)</label>
-          <label><input type="checkbox"> Seat Shampoo / Extraction (+$40+)</label>
-          <label><input type="checkbox"> Heavy Pet Hair Removal (+$30+)</label>
-          <label><input type="checkbox"> Heavy Odor Removal (+$40+)</label>
-        </div>
-        <textarea rows="4" placeholder="Vehicle details, address constraints (gate codes, parking limitations, etc.), special notes..."></textarea>
+        <input type="date" name="date" required>
+        <textarea name="notes" rows="4" placeholder="Vehicle details & special notes..."></textarea>
         <button type="submit" class="btn">Submit Booking Request</button>
       </form>
     </div>
@@ -380,7 +242,7 @@
 
 <script>
   const serviceButtons = document.querySelectorAll('.select-service');
-  const serviceDropdown = document.querySelector('select');
+  const serviceDropdown = document.querySelector('select[name="service"]');
 
   serviceButtons.forEach(button => {
     button.addEventListener('click', function() {
@@ -389,5 +251,6 @@
     });
   });
 </script>
+
 </body>
 </html>
