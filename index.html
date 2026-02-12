@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Señor Shine | Mobile Detailing</title>
+  <title>Seor Shine | Mobile Detailing</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root{
@@ -207,9 +207,9 @@
             <li>Tire scrub + tire shine</li>
             <li>Door jamb wipe-down</li>
             <li>Spray sealant for gloss + protection (3 month protection)</li>
-                        <li>Final towel dry (no water spots)</li>
+            <li>Final towel dry (no water spots)</li>
           </ul>
-          <a href="#booking" class="btn">Select</a>
+          <a href="#booking" class="btn select-service" data-service="Exterior Detail">Select</a>
         </div>
 
         <div class="card">
@@ -229,7 +229,7 @@
           <div style="color:var(--muted); font-size:13px; line-height:1.5; margin-bottom:18px;">
             <span style="color:var(--accent2); font-weight:600;">Note:</span> Heavy pet hair, deep stains, excessive sand/mud, or heavy odor removal may require an add-on.
           </div>
-          <a href="#booking" class="btn">Select</a>
+          <a href="#booking" class="btn select-service" data-service="Interior Detail">Select</a>
         </div>
 
         <div class="card">
@@ -244,7 +244,7 @@
             <li>Final touch-up inspection</li>
             <li>High-gloss finish + clean interior reset</li>
           </ul>
-          <a href="#booking" class="btn">Select</a>
+          <a href="#booking" class="btn select-service" data-service="Full Detail">Select</a>
         </div>
       </div>
     </div>
@@ -377,5 +377,17 @@
   <footer>
     © 2026 Señor Shine Mobile Detailing
   </footer>
+
+<script>
+  const serviceButtons = document.querySelectorAll('.select-service');
+  const serviceDropdown = document.querySelector('select');
+
+  serviceButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      const selectedService = this.getAttribute('data-service');
+      serviceDropdown.value = selectedService;
+    });
+  });
+</script>
 </body>
 </html>
