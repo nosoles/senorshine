@@ -373,7 +373,7 @@
 
       <!-- Cal.com embed (availability + booking questions) -->
       <div style="max-width:980px; margin:0 auto;">
-        <div data-cal-link="senor-shine/mobile-detailing-booking" data-cal-config='{"layout":"month_view"}' style="width:100%; min-height:900px;"></div>
+        <div id="cal-embed" style="width:100%; min-height:900px;"></div>
       </div>
     </div>
   </section>
@@ -410,6 +410,15 @@
   })(window, "https://app.cal.com/embed/embed.js", "init");
 
   Cal("init", { origin: "https://cal.com" });
+
+  // Render inline calendar (so it shows immediately)
+  window.addEventListener("load", function () {
+    Cal("inline", {
+      elementOrSelector: "#cal-embed",
+      calLink: "senor-shine/mobile-detailing-booking",
+      config: { layout: "month_view" }
+    });
+  });
 </script>
 </body>
 </html>
