@@ -366,44 +366,15 @@
     <div class="container">
       <div class="section-title">
         <h2>Book Your Appointment</h2>
-        <p style="color:var(--muted); margin-top:10px; max-width:520px; margin-left:auto; margin-right:auto;">
-          After submitting the form, your booking request will be reviewed and confirmed shortly via text or email.
+        <p style="color:var(--muted); margin-top:10px; max-width:650px; margin-left:auto; margin-right:auto;">
+          Select an available date &amp; time below. You’ll receive a confirmation email and calendar invite after booking.
         </p>
       </div>
 
-      <form>
-        <input type="text" name="full_name" placeholder="Full Name" required>
-        <input type="tel" name="phone" placeholder="Phone" required>
-        <input type="email" name="email" placeholder="Email" required>
-
-        <div class="label">Service Address</div>
-        <input type="text" name="address" placeholder="Street Address" required>
-        <input type="text" name="city" placeholder="City" required>
-        <input type="text" name="zip" placeholder="ZIP Code" required>
-
-        <select name="service" required>
-          <option value="">Select Service</option>
-          <option>Exterior Detail</option>
-          <option>Interior Detail</option>
-          <option>Full Detail</option>
-        </select>
-
-        <input type="date" name="date" required>
-
-        <div class="label">Select Add-Ons (Optional)</div>
-        <div class="checkbox-grid">
-          <label><input type="checkbox" name="addons" value="Clay Bar + Iron Decontamination ($35)"> Clay Bar + Iron Decontamination ($35)</label>
-          <label><input type="checkbox" name="addons" value="Exterior Plastic Trim Dressing ($20)"> Exterior Plastic Trim Dressing ($20)</label>
-          <label><input type="checkbox" name="addons" value="Engine Bay Detail ($25)"> Engine Bay Detail ($25)</label>
-          <label><input type="checkbox" name="addons" value="Headlight Restoration ($30)"> Headlight Restoration ($30)</label>
-          <label><input type="checkbox" name="addons" value="Seat Shampoo / Extraction ($40)"> Seat Shampoo / Extraction ($40)</label>
-          <label><input type="checkbox" name="addons" value="Heavy Pet Hair Removal ($30)"> Heavy Pet Hair Removal ($30)</label>
-          <label><input type="checkbox" name="addons" value="Heavy Odor Removal ($75)"> Heavy Odor Removal ($75)</label>
-        </div>
-
-        <textarea name="notes" rows="4" placeholder="Vehicle details, address constraints (gate codes, parking limitations, etc.), special notes..."></textarea>
-        <button type="submit" class="btn">Submit Booking Request</button>
-      </form>
+      <!-- Cal.com embed (availability + booking questions) -->
+      <div style="max-width:980px; margin:0 auto;">
+        <div data-cal-link="senor-shine/mobile-detailing-booking" data-cal-config='{"layout":"month_view"}' style="width:100%; min-height:900px;"></div>
+      </div>
     </div>
   </section>
 
@@ -411,18 +382,34 @@
     © 2026 Señor Shine Mobile Detailing
   </footer>
 
+<!-- Cal.com embed script -->
 <script>
-  // Auto-select service when clicking a pricing card button
-  const serviceButtons = document.querySelectorAll('.select-service');
-  const serviceDropdown = document.querySelector('select[name="service"]');
+  (function (C, A, L) {
+    let p = function (a, ar) { a.q.push(ar); };
+    let d = C.document;
+    C.Cal = C.Cal || function () {
+      let cal = C.Cal;
+      let ar = arguments;
+      if (!cal.loaded) {
+        cal.ns = {};
+        cal.q = cal.q || [];
+        d.head.appendChild(d.createElement("script")).src = A;
+        cal.loaded = true;
+      }
+      if (ar[0] === L) {
+        const api = function () { p(api, arguments); };
+        const namespace = ar[1];
+        api.q = api.q || [];
+        typeof namespace === "string" && (cal.ns[namespace] = api);
+        p(api, ar);
+        p(cal, [L, namespace]);
+        return;
+      }
+      p(cal, ar);
+    };
+  })(window, "https://app.cal.com/embed/embed.js", "init");
 
-  serviceButtons.forEach(button => {
-    button.addEventListener('click', function() {
-      const selectedService = this.getAttribute('data-service');
-      serviceDropdown.value = selectedService;
-    });
-  });
+  Cal("init", { origin: "https://cal.com" });
 </script>
-
 </body>
 </html>
